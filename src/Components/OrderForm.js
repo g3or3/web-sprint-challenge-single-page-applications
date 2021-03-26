@@ -101,10 +101,11 @@ const OrderForm = (props) => {
 						name="substituteChoice"
 						type="button"
 						onClick={toggle}
+						style={{ marginRight: "2%" }}
 					>
-						Toggle
+						{values.substitute === true ? "Yes!" : "No thank you."}
 					</button>
-					Gluten Free Crust (+ $1.00)
+					Gluten Free Crust (+ $1.00){" "}
 				</label>
 
 				<div>
@@ -116,6 +117,10 @@ const OrderForm = (props) => {
 						type="text"
 						value={values.special}
 						onChange={onChange}
+						style={{
+							width: "100%",
+							height: "3vh",
+						}}
 					></input>
 				</label>
 
