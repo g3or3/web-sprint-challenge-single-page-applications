@@ -36,6 +36,11 @@ const OrderForm = (props) => {
 		setQuantity((quantity) => quantity + 1);
 	};
 
+	const decrement = () => {
+		change("quantity", quantity);
+		setQuantity((quantity) => quantity - 1);
+	};
+
 	return (
 		<StyledForm>
 			<h2>Build Your Own Pizza</h2>
@@ -92,7 +97,11 @@ const OrderForm = (props) => {
 					<h4>Choice of Substitute</h4>
 				</div>
 				<label className="options">
-					<button type="button" onClick={toggle}>
+					<button
+						name="substituteChoice"
+						type="button"
+						onClick={toggle}
+					>
 						Toggle
 					</button>
 					Gluten Free Crust (+ $1.00)
@@ -112,12 +121,22 @@ const OrderForm = (props) => {
 
 				<div className="bottom">
 					<div className="counter">
-						<span>{values.quantity}</span>
+						<span id="total">{values.quantity}</span>
 						<div className="btns">
-							<button type="button" onClick={increment}>
+							<button
+								name="increase"
+								type="button"
+								onClick={increment}
+							>
 								+
 							</button>
-							<button type="button">-</button>
+							<button
+								name="decrease"
+								type="button"
+								onClick={decrement}
+							>
+								-
+							</button>
 						</div>
 					</div>
 

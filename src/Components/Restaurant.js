@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import img from "../Assets/merchant1.jpg";
 
 const StyledRestaurant = styled.div`
 	max-width: 100%;
@@ -23,6 +22,7 @@ const StyledRestaurant = styled.div`
 `;
 
 const Restaurant = (props) => {
+	const { img } = props;
 	return (
 		<StyledRestaurant>
 			<img src={img} alt="Merchant 1"></img>

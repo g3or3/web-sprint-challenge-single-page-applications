@@ -3,7 +3,7 @@ import Header from "../Header";
 import OrderForm from "../OrderForm";
 
 const emptyOrder = {
-	size: "small",
+	size: "Small",
 	sauce: "",
 	toppings: [],
 	substitute: false,
@@ -19,7 +19,7 @@ const OrderPage = (props) => {
 	const orderFormChange = (name, value, checked) => {
 		// check to see if the name and value that came back is a topping
 		if (name === "toppings") {
-			// checked determines if we need to add it to the toppings array or remove it
+			// 'checked' determines if we need to add it to the toppings array or remove it
 			if (checked) {
 				setOrderValues({
 					...orderValues,

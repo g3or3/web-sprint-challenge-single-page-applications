@@ -13,13 +13,21 @@ const StyledBanner = styled.section`
 	height: 50vh;
 
 	h2 {
+		border-radius: 10px;
+		padding: 1%;
 		font-size: 2rem;
 		background-color: white;
 		color: black;
 	}
 
 	a {
-		color: white;
+		background-color: white;
+		color: black;
+		padding: 3px 5px;
+		font-size: 1.5rem;
+		font-weight: bolder;
+		border-radius: 10px;
+		text-decoration: none;
 	}
 `;
 

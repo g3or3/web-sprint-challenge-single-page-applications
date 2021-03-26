@@ -2,6 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import Restaurant from "./Restaurant";
 
+const importAll = (r) => {
+	return r.keys().map(r);
+};
+
+const images = importAll(
+	require.context("../Assets/Merchants", false, /\.jpg/)
+);
+
 const StyledRestaurants = styled.section`
 	display: flex;
 	flex-wrap: wrap;
@@ -12,12 +20,9 @@ const StyledRestaurants = styled.section`
 const Restaurants = (props) => {
 	return (
 		<StyledRestaurants>
-			<Restaurant />
-			<Restaurant />
-			<Restaurant />
-			<Restaurant />
-			<Restaurant />
-			<Restaurant />
+			{images.map((image, idx) => {
+				return <Restaurant key={idx} img={image} />;
+			})}
 		</StyledRestaurants>
 	);
 };

@@ -5,6 +5,8 @@ const StyledConfirmation = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 70%;
+	margin: 0 auto;
 `;
 
 const Confirmation = ({ complete }) => {
@@ -16,11 +18,11 @@ const Confirmation = ({ complete }) => {
 				<p>Size: {complete.size}</p>
 				<p>Sauce: {complete.sauce}</p>
 				{complete.toppings.map((topping, idx) => {
-					return <p key={idx}>{topping}</p>;
+					return <span key={idx}>{topping}</span>;
 				})}
 				<p>
-					Choice of Substitute:{" "}
-					{(complete.substitute = true ? "Gluten Free Crust" : "")}
+					Choice of Substitute:
+					{complete.substitute === true ? " Gluten Free Crust" : ""}
 				</p>
 				<p>Special Instructions: {complete.special}</p>
 				<p>Quantity: {complete.quantity}</p>
