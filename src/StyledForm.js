@@ -46,9 +46,9 @@ const StyledForm = styled.div`
 	.bottom {
 		display: flex;
 		justify-content: space-between;
-		padding: 3% 10% 0;
+		padding: 2% 10% 0;
 		background-color: white;
-		border-top: 2px solid black;
+		border-top: 3px solid black;
 	}
 
 	.counter {
