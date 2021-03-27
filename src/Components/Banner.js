@@ -24,7 +24,7 @@ const StyledBanner = styled.section`
 		background-color: white;
 		color: black;
 		padding: 3px 5px;
-		font-size: 1.5rem;
+		font-size: 2rem;
 		font-weight: bolder;
 		border-radius: 10px;
 		text-decoration: none;
@@ -35,7 +35,12 @@ const Banner = (props) => {
 	return (
 		<StyledBanner>
 			<h2>Your favorite food, delivered while coding</h2>
-			<Link to="/pizza">Pizza?</Link>
+			<Link to="/pizza">
+				<span role="img" aria-label="pizza">
+					🍕
+				</span>{" "}
+				?
+			</Link>
 		</StyledBanner>
 	);
 };

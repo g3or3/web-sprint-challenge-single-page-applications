@@ -7,6 +7,7 @@ const StyledRestaurant = styled.div`
 	margin-bottom: 5%;
 
 	img {
+		border-radius: 15px;
 		width: 100%;
 	}
 

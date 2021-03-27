@@ -5,8 +5,9 @@ const StyledConfirmation = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 70%;
-	margin: 0 auto;
+	width: 40%;
+	margin: 2% auto 1%;
+	border: 2px solid black;
 `;
 
 const Confirmation = ({ complete }) => {
@@ -17,6 +18,7 @@ const Confirmation = ({ complete }) => {
 				<p>Here's your order confirmation:</p>
 				<p>Size: {complete.size}</p>
 				<p>Sauce: {complete.sauce}</p>
+				<p>Toppings:</p>
 				{complete.toppings.map((topping, idx) => {
 					return <span key={idx}>{topping}</span>;
 				})}

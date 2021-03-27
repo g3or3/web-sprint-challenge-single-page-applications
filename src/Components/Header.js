@@ -17,6 +17,11 @@ const StyledHeader = styled.header`
 		justify-content: space-around;
 		align-items: center;
 	}
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
 `;
 
 const Header = (props) => {
@@ -25,7 +30,7 @@ const Header = (props) => {
 			<h1>Lambda Eats</h1>
 			<nav>
 				<NavLink to="/">Home</NavLink>
-				<NavLink to="/">About</NavLink>
+				<NavLink to="/pizza">Order Here</NavLink>
 				<NavLink to="/">Contact</NavLink>
 			</nav>
 		</StyledHeader>
